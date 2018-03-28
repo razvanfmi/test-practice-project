@@ -1,11 +1,11 @@
 package test.projects;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 
+import static org.junit.Assert.assertEquals;
 
 public class SnackMachineTest {
     @Test
@@ -64,7 +64,7 @@ public void testBuyProduct() throws UnsupportedEncodingException {
         String deliveredProduct = deliveryOutputDestination.getOutput().get(0);
 
         //assert deliveredProduct.equals("Delivered product 3");
-        TestCase.assertEquals(deliveredProduct,"Delivered product 3" );
+        assertEquals(deliveredProduct,"Delivered product 3" );
 
 }
 @Test
@@ -125,11 +125,11 @@ public void testBuyMultipleProducts() throws UnsupportedEncodingException {
 
         String deliveredProduct1 = output.get(0);
         //assert deliveredProduct1.equals("Delivered product 3");
-        TestCase.assertEquals(deliveredProduct1,"Delivered product 3" );
+        assertEquals(deliveredProduct1,"Delivered product 3" );
 
         String deliveredProduct2 = output.get(1);
         //assert deliveredProduct2.equals("Delivered product 2");
-        TestCase.assertEquals(deliveredProduct2,"Delivered product 2");
+        assertEquals(deliveredProduct2,"Delivered product 2");
 
     }
     @Test
@@ -188,7 +188,7 @@ public void testBuyMultipleProducts() throws UnsupportedEncodingException {
       String deliveredProduct = displayOutputDestination.getOutput().get(2);
       //System.out.println(deliveredProduct);
      // assert deliveredProduct.equals("No such product");
-      TestCase.assertEquals(deliveredProduct,"No such product");
+      assertEquals(deliveredProduct,"No such product");
 
       }
     @Test
@@ -247,11 +247,11 @@ public void testBuyMultipleProducts() throws UnsupportedEncodingException {
 
         String deliveredProduct1 = deliveryOutputDestination.getOutput().get(0);
        // assert deliveredProduct1.equals("Delivered product 1");
-          TestCase.assertEquals(deliveredProduct1,"Delivered product 1");
+          assertEquals(deliveredProduct1,"Delivered product 1");
 
         String deliveredProduct2 = displayOutputDestination.getOutput().get(5);
         //assert deliveredProduct2.equals("Product not available.");
-          TestCase.assertEquals(deliveredProduct2, "Product not available.");
+          assertEquals(deliveredProduct2, "Product not available.");
     }
     @Test
     public void testCheckPrice() throws UnsupportedEncodingException {
@@ -308,13 +308,13 @@ public void testBuyMultipleProducts() throws UnsupportedEncodingException {
         String deliveredProduct = displayOutputDestination.getOutput().get(2);
         //System.out.println(deliveredProduct);
         //assert deliveredProduct.equals("Please pay 3.0");
-        TestCase.assertEquals(deliveredProduct,"Please pay 3.0");
+        assertEquals(deliveredProduct,"Please pay 3.0");
 
         snackMachine.takeOrder();
         String deliveredProduct2 = displayOutputDestination.getOutput().get(6);
         //System.out.println(deliveredProduct2);
         //assert deliveredProduct2.equals("4.0 left");
-       TestCase.assertEquals(deliveredProduct2, "4.0 left");
+       assertEquals(deliveredProduct2, "4.0 left");
 
     }
 }

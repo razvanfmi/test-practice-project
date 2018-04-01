@@ -7,6 +7,7 @@ import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class SnackMachineTest {
     @Test
 public void testBuyProduct() throws UnsupportedEncodingException {
